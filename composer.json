@@ -1,0 +1,46 @@
+{
+    "name": "benargo/laravel-json-schema",
+    "description": "'JSON Schema for PHP' wrapper for Laravel framework",
+    "type": "library",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/benargo/laravel-json-schema"
+        }
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Argo",
+            "email": "ben@benargo.com"
+        }
+    ],
+    "require": {
+        "justinrainbow/json-schema": "^5.2",
+        "laravel/framework": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "BenArgo\\JsonSchema\\": "src/JsonSchema"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                    "BenArgo\\JsonSchema\\ServiceProvider"
+            ],
+            "aliases": {
+                "JsonValidator": "BenArgo\\JsonSchema\\Facades\\Validator"
+            }
+        }
+    }
+}
